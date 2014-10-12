@@ -218,6 +218,8 @@ public class TmxLoader {
     private TmxData parseData(XmlTag xmlData) {
         TmxData data = new TmxData();
         data.setEncoding(xmlData.attributes.get("encoding"));
+        data.setCompression(xmlData.attributes.get("compression"));
+        System.out.println(xmlData.attributes);
         data.setData(xmlData.content);
         return data;
     }
